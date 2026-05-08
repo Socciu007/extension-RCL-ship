@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "hello vue extend",
-  "description": "hello vue extend",
+  "name": "E-BOOKING RCL",
+  "description": "Used to book sea orders for RCL",
   "version": "0.0.1",
 
   "icons": {
@@ -10,7 +10,7 @@
 
   "action": {
     "default_icon": "img/logo_rcl.png",
-    "default_title": "hello vue extend",
+    "default_title": "E-BOOKING RCL",
     "default_popup": "popup.html"
   },
 
