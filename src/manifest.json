@@ -1,41 +1,52 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "hello vue extend",
   "description": "hello vue extend",
   "version": "0.0.1",
+
   "icons": {
-    "48": "img/logo.png"
+    "48": "img/logo_rcl.png"
   },
-  "browser_action": {
-    "default_icon": "img/logo.png",
+
+  "action": {
+    "default_icon": "img/logo_rcl.png",
     "default_title": "hello vue extend",
     "default_popup": "popup.html"
   },
+
   "background": {
-    "scripts": [
-      "js/hot-reload.js",
-      "js/background.js"
-    ]
+    "service_worker": "js/background.js"
   },
-  "content_scripts": [{
-    "matches": ["<all_urls>"],
-    "js": ["js/content.js"],
-    "run_at": "document_idle"
-  }],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
   "devtools_page": "devcreate.html",
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
   "options_page": "options.html",
+
   "permissions": [
-    "http://localhost:3000/*",
     "runtime",
     "activeTab",
     "alarms",
-    "https://eservice.rclgroup.com/*",
     "storage",
     "webRequest",
     "tabs",
-    "webRequestBlocking",
-    "webNavigation",
+    "webNavigation"
+  ],
+
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "https://eservice.rclgroup.com/*",
     "<all_urls>"
-  ]
+  ],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
 }

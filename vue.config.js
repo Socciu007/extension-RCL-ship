@@ -14,6 +14,10 @@ const plugins = [
     to: `${path.resolve('dist')}/img/logo.png`
   },
   {
+    from: path.resolve('src/assets/logo_rcl.png'),
+    to: `${path.resolve('dist')}/img/logo_rcl.png`
+  },
+  {
     from: path.resolve('src/background/background.js'),
     to: `${path.resolve('dist')}/js/background.js`
   },
