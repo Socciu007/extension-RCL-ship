@@ -1,3 +1,4 @@
+```
 vue-chrome-extend
 ├── README.md
 ├── babel.config.js
@@ -57,3 +58,4 @@ vue-chrome-extend
 │       ├── fixCaton.js
 │       └── storage.js
 └── vue.config.js
+```
